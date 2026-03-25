@@ -21,7 +21,6 @@ export default function SectionAbout() {
             key={i}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ delay: i * 0.1, type: "spring" }}
             className={`absolute ${pop.color} px-8 py-3 ad-border ad-shadow font-heading text-2xl z-20 hidden md:block rounded-xl`}
             style={{ left: pop.x, top: pop.y }}
             animate={{ y: [0, -15, 0] }}
