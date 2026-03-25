@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #007BFF; /* Electric Blue */
+  --color-secondary: #00FFFF; /* Cyan */
+  --color-tertiary: #0A192F; /* Deep Navy */
+  --color-accent: #004085; /* Darker Blue */
+  
+  --color-background: #0A192F; /* Main Dark Theme */
+  
+  --font-heading: "Bangers", cursive;
+  --font-body: "Varela Round", sans-serif;
+
+  --radius-chunky: 24px;
+}
+
+:root {
+  --black-border: 4px solid #000;
+  --white-border: 4px solid #fff;
+  --neon-border: 4px solid #00FFFF;
+  --black-shadow: 4px 4px 0px 0px #000;
+  --neo-shadow: 4px 4px 0px 0px #007BFF;
+  --black-shadow-lg: 8px 8px 0px 0px #000;
+}
+
+@utility ad-border {
+  border: var(--white-border);
+}
+
+@utility ad-shadow {
+  box-shadow: var(--neo-shadow);
+}
+
+@utility ad-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #007BFF;
+}
+
+@utility ad-button {
+  @apply font-heading text-white px-8 py-3 rounded-full ad-border ad-shadow transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#007BFF];
+}
+
+@utility snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@utility snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Base resets */
+body {
+  @apply font-body text-white;
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4 {
+  @apply font-heading uppercase;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@utility animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-ticker {
+  display: flex;
+  width: 200%;
+  animation: ticker 15s linear infinite;
+}
