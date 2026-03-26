@@ -17,7 +17,7 @@ export default function HowToBuy() {
       </div>
 
       <div className="z-10 text-center">
-        <h2 className="text-7xl md:text-[10rem] font-heading text-white leading-[0.8] mb-12 drop-shadow-[10px_10px_0_#007BFF]" style={{ WebkitTextStroke: "2px #fff" }}>
+        <h2 className="text-5xl md:text-[10rem] font-heading text-white leading-[0.8] mb-12 drop-shadow-[10px_10px_0_#007BFF]" style={{ WebkitTextStroke: "2px #fff" }}>
           HOW TO BUY?
         </h2>
 
@@ -28,9 +28,9 @@ export default function HowToBuy() {
                initial={{ rotate: -5, y: 50, opacity: 0 }}
                whileInView={{ rotate: 0, y: 0, opacity: 1 }}
                transition={{ delay: i * 0.1 }}
-               className="bg-[#020D1D] ad-border ad-shadow rounded-[32px] p-10 hover:scale-105 transition-all group shadow-[8px_8px_0_0_#007BFF]"
+               className="bg-[#020D1D] ad-border ad-shadow rounded-[32px] p-10 hover:scale-105 transition-all group shadow-[8px_8px_0_0_#007BFF] flex flex-col items-center text-center"
              >
-                <div className="w-14 h-14 bg-secondary text-black rounded-full ad-border flex items-center justify-center font-heading text-3xl mb-8 shadow-[4px_4px_0_0_#fff]">
+                <div className="w-16 h-16 bg-secondary text-black rounded-full ad-border flex items-center justify-center font-heading text-4xl mb-8 shadow-[4px_4px_0_0_#fff]">
                    {i + 1}
                 </div>
                 <h3 className="text-3xl mb-4 text-white leading-tight">{step.title}</h3>

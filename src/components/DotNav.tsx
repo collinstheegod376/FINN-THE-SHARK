@@ -41,7 +41,7 @@ export default function DotNav() {
   };
 
   return (
-    <div className="fixed right-10 top-1/2 -translate-y-1/2 z-[150] flex flex-col gap-10 items-center">
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-[150] hidden lg:flex flex-col gap-10 items-center">
       {sections.map((section) => (
         <button
           key={section.id}
